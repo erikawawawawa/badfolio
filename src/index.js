@@ -106,8 +106,8 @@ class App extends React.Component {
 
         <div id="about">
           <p>
-            follow me on{" "}
-            <a href="https://www.instagram.com/campus.securityy/">instagram</a>
+            Made by Erika Wang | {" "}
+            <a href="https://codepen.io/erikawawawa">CodePen</a>
           </p>
         </div>
         <div id="text">
