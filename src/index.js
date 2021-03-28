@@ -37,7 +37,7 @@ function getRandomTop() {
 }
 
 function getRandomLeft() {
-  return (Math.random() * getWindowSize().windowWidth) / 2;
+  return (Math.random() * getWindowSize().windowWidth) / 2.1;
 }
 
 class App extends React.Component {
