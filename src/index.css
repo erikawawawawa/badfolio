@@ -61,7 +61,13 @@ h1{
   transform: rotate(5deg) scale(1.06);
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
+  h1{
+   font-size: 18px;
+  }
+  p{
+   font-size: 15px;
+  }
   .no{
      position: absolute;
      display: block;
