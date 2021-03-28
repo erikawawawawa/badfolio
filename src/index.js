@@ -106,8 +106,9 @@ class App extends React.Component {
 
         <div id="about">
           <p>
-            Made by Erika Wang | {" "}
-            <a href="https://codepen.io/erikawawawa">CodePen</a>
+            Art and code by Erika Wang | {" "}
+            <a href="https://codepen.io/erikawawawa">CodePen</a> |
+            <a href="https://www.instagram.com/campus.securityy/">Instagram</a>
           </p>
         </div>
         <div id="text">
