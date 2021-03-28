@@ -22,6 +22,7 @@ let storageRef = firebase.storage().ref();
 let cat = "https://pbs.twimg.com/media/Euhf7bOXcAIiek0?format=jpg&name=small";
 
 let myIllusts = [];
+let imageUrlList = [];
 
 function getWindowSize() {
   const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
@@ -36,7 +37,7 @@ function getRandomTop() {
 }
 
 function getRandomLeft() {
-  return (Math.random() * getWindowSize().windowWidth) / 1.7;
+  return (Math.random() * getWindowSize().windowWidth) / 2;
 }
 
 class App extends React.Component {
@@ -57,7 +58,6 @@ class App extends React.Component {
   };
   
   componentDidMount() {
-    let imageUrlList = []
     let self = this;
 
     storageRef.child('images').listAll()
@@ -82,7 +82,7 @@ class App extends React.Component {
   render() {
     let illustContainer = [];
 
-     for (let i = 0; i < 10; i++) {
+     for (let i = 0; i < imageUrlList.length; i++) {
       let randomSpot = this.returnRandomSpot();
       let isHidden = true;
       if (i < this.state.imageUrls.length) {
