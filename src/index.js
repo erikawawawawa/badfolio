@@ -19,9 +19,6 @@ firebase.initializeApp(firebaseConfig);
 
 let storageRef = firebase.storage().ref();
 
-let cat = "https://pbs.twimg.com/media/Euhf7bOXcAIiek0?format=jpg&name=small";
-
-let myIllusts = [];
 let imageUrlList = [];
 
 function getWindowSize() {
@@ -46,6 +43,8 @@ class App extends React.Component {
     this.state={
       illustContainerTwo:[],
       imageUrls:[],
+      imageEnlarged: false,
+      imageToShow: ""
     };
   }
 
@@ -94,6 +93,7 @@ class App extends React.Component {
             <div className="no" style={randomSpot}>
               <img src={this.state.imageUrls[i]}
                    alt="some thing"
+onDoubleClick={()=> this.setState((state) => ({ imageEnlarged: true, imageToShow: someUrl}))}
                    hidden={isHidden}/>
             </div>
           </Draggable>
@@ -102,6 +102,11 @@ class App extends React.Component {
 
     return (
       <div className="item">
+      <div id="lightbox" 
+       onClick={()=>this.setState((state)=>({imageEnlarged: false}))} 
+       style={{display:this.state.imageEnlarged ? 'grid': 'none'}}>
+          <img id="lightbox-img" src={this.state.imageToShow}></img>
+        </div>
         {illustContainer}
 
         <div id="about">
@@ -113,7 +118,7 @@ class App extends React.Component {
         </div>
         <div id="text">
           <h1>badfolio</h1>
-          <p>an archive for the unarchived</p>
+          <p>an archive for unfinished work</p>
         </div>
       </div>
     );

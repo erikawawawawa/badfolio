@@ -2,7 +2,7 @@
 
 body {
   background-image: url("https://res.cloudinary.com/dbiwj2oo8/image/upload/v1616889248/bedge-grunge_v41sbv.png");
-  background-color: #B7D1C9;
+  background-color: #D3D6D5;
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
   overflow-x: hidden;
@@ -23,7 +23,7 @@ p{
 }
 
 #about{
-  z-index: -998;
+  z-index: -1000;
   position: fixed;
   text-align: right;
   float: right;
@@ -43,6 +43,7 @@ h1{
 }
 
 .no{
+  z-index: -970;
   position: absolute;
   display: block;
   width: 40%;
@@ -50,6 +51,7 @@ h1{
 }
 
 .no img{
+    z-index: -970;
     max-width: 100%;
     max-height: 100%;
     cursor: move;
@@ -86,3 +88,24 @@ h1{
     opacity: 100%;
   }
 }
+
+#lightbox {
+  position: fixed;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(100,100, 100, 0.6);
+  display: grid;
+  grid-template: 1fr/1fr;
+  place-items: center;
+}
+
+#lightbox-img {
+  z-index: 9999;
+  height: 70vh;
+  max-width: 80vw;
+  object-fit: contain;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
