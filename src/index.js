@@ -84,6 +84,7 @@ class App extends React.Component {
      for (let i = 0; i < imageUrlList.length; i++) {
       let randomSpot = this.returnRandomSpot();
       let isHidden = true;
+      let someUrl = this.state.imageUrls[i];
       if (i < this.state.imageUrls.length) {
         isHidden = false;
       }
@@ -91,7 +92,7 @@ class App extends React.Component {
       illustContainer.push(
           <Draggable handle="img">
             <div className="no" style={randomSpot}>
-              <img src={this.state.imageUrls[i]}
+              <img src={someUrl}
                    alt="some thing"
 onDoubleClick={()=> this.setState((state) => ({ imageEnlarged: true, imageToShow: someUrl}))}
                    hidden={isHidden}/>
