@@ -112,9 +112,7 @@ onDoubleClick={()=> this.setState((state) => ({ imageEnlarged: true, imageToShow
 
         <div id="about">
           <p>
-            Art and code by Erika Wang | {" "}
-            <a href="https://codepen.io/erikawawawa">CodePen</a> |{" "}
-            <a href="https://www.instagram.com/campus.securityy/">Instagram</a>
+            Art and code by Erika Wang
           </p>
         </div>
         <div id="text">
